@@ -1,0 +1,337 @@
+
+
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding:0;
+    margin:0;
+    background-color: #C2BBB8;
+}
+
+/* Global */
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+	color: #FFE6C2;
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+/* Header */
+header{
+    background: #3c3a39;
+    color: #FFE6C2;
+    padding-top:30px;
+    min-height:70px;
+    border-bottom: #FFE6C2 3px solid;
+}
+
+header a{
+    color: #FFE6C2;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:16px;
+}
+
+
+
+header li{
+    float:left;
+    display:inline;
+    padding:0 20px 0 20px;
+}
+
+header #branding {
+    float:left;
+    margin-left: 0px;
+}
+
+header #branding h1{
+    /* margin: 0px; */
+}
+
+header nav{
+    float:right;
+    margin-top:10px;
+}
+
+header .highlight, header .current a{
+    color:#e8491d;
+    font-weight:bold;
+}
+
+header a:hover{
+    color:#cccccc;
+    font-weight:bold;
+}
+
+/* Showcase */
+
+#showcase{
+   
+   
+    background-size:cover;
+    text-align:center;
+    color:#C2BBB8;
+    
+}
+
+
+
+
+#showcase h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+   
+    
+}
+
+#showcase p{
+    font-size:20px;
+	padding: 0 20%;
+	text-align: justify;
+   
+}
+
+/* Contact */
+
+#contactDetes {
+	float: right;
+	width: 280px;
+	/* padding: 30px 0px 0px 0px; */
+	list-style:none;
+}
+
+
+/* Content Holder*/
+
+#contentHolder{
+    
+padding:15px;
+    
+color:#FFE6C2;
+    
+background: #3c3a39;
+}
+
+.menuH1{
+     text-align:center; 
+	 font-size: 32px;
+	 color:#FFE6C2;
+	 margin:0;
+}
+
+#contentHolder form{
+    
+    float:right;
+    margin-top:15px;
+}
+
+/* Coupons */
+
+.container .userInfo {
+  border: 5px dotted #bbb; /* Dotted border */
+  width: 48%; 
+  border-radius: 15px; /* Rounded border */
+  margin: 0 auto; /* Center the coupon */
+  max-width: 600px;
+  padding-bottom: 1.5%;
+  display: inline-table;
+    
+ 
+}
+
+.coupContents {
+   padding: 2px 16px;
+   background-color: #D9631E;
+}
+
+
+.promo {
+  background: #ccc;
+  padding: 3px;
+  color: #000;
+}
+.expire {
+  color: red;
+}
+
+
+/*  Boxes  */
+
+#boxes {
+    width: 100%;
+    margin-top:20px;
+    min-height: 300px;
+	
+}
+
+
+
+.container #boxes .box{
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 10px;
+    display:inline-table;
+    text-align:center;
+    width:30%;
+    padding-left:2.5%;
+    
+}
+
+#boxes #description p {
+    display: block;
+    color: #FFE6C2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+   
+}
+
+#boxes .box .boxImg{
+    width: 60%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+    
+}
+    
+
+
+/* Image Carousel - From W3 Schools*/
+.slide {
+	display:none;
+}
+.carousel {
+	max-width: 100%;
+	position:relative;
+	margin:auto;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Form layout */
+
+.formCont {
+    margin:auto;
+    width:80%;
+    border-bottom:3px solid #e8491d;
+    background:#35424a;
+    padding: 10px;
+    text-align:center;
+    color:#ffffff;
+}
+
+input[type=text], select {
+    width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 35%;
+    background-color: #e8491d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit_show_new h1{
+    text-align:center;
+}
+
+.edit_show_new p{
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    min-height:120px;
+}
+
+.edit_show_new a.button{
+    margin:20px 15px;
+}
+
+.edit_show_new #show_par {
+    margin:40px 40px;
+}
+
+#ItemContImg {
+    width: 55%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+}
+/* footer */
+footer{
+    padding:20px;
+    margin-top:20px;
+    color:#FFE6C2;
+    background-color: #3c3a39;
+    text-align:center;
+}
+
+@media only screen and (min-width: 1550px){
+	.container .coupon {
+		width:24%;
+	}
+}
+
+
+
+

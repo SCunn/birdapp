@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+
+    
+		
+		
+		  
+		  
+
+			  <div class="container">
+			   <div style="background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.66) 0%,rgba(255,255,255,0.00) 103.52%);">
+				<h1>Welcome to the Users page!</h1>
+				<p style="text-align:left;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Donec ornare aliquam ipsum, quis imperdiet massa egestas a. Pellentesque convallis 
+				viverra justo, ac commodo dui vehicula non. Praesent sed sem lectus. Sed vel nisi 
+				egestas, tempor turpis in, vulputate lorem.</p>
+				
+			
+					<% users.forEach(function(users){ %>
+					<div class="userInfo">
+						<h3>Id: <%= users.id %> </h3>
+						<h3>Comment: <%= users.Comment %> </h3>
+						<h3>Name: <%= users.name %> </h3>
+						<h3>Email: <%= users.email %> </h3>
+					</div>	
+					<% }); %>
+					
+			
+			   </div>
+			  </div>
+		    
+		</section>
+		  
+ 
+			
+		   
+			
+		  
+		  
+		  
+		 
+		  
+<% include ../partials/footer %>	
