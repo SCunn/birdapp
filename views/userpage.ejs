@@ -1,14 +1,44 @@
-<% include ../partials/header %>
+ <!--userpage.ejs page.  This page was created by Shane Cunningham and is based on the contact.ejs page created by Liam McCabe-->
 
-    
+
+<% include ../partials/header %>
+ <section id="contentHolder">	
+	<h1 class="container" >Welcome to the Users page!</h1>
+	
+    <section id="showcase">
+					  
+					 <div class="carousel">
+		
+						
+						<div class="slide fade">
+						  <img src="/bird-197052_640.jpg" alt="bird" style="width:100%;" >
+						</div>
+						
+						<div class="slide fade">
+						  <img src="/eagle-1753002_640.jpg" alt="Eagle" style="width:100%;" >
+						</div>
+						
+						<div class="slide fade">
+						  <img src="/kite-1119277_640.jpg" alt="Kite" style="width:100%;" >
+						</div>
+						
+						<div class="slide fade">
+						  <img src="/owl-2.jpg" alt="owl-2" style="width:100%;" >
+						</div>
+						 
+					 </div>  
+			   </section>
 		
 		
 		  
 		  
 
 			  <div class="container">
-			   <div style="background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.66) 0%,rgba(255,255,255,0.00) 103.52%);">
-				<h1>Welcome to the Users page!</h1>
+			   <div style="background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.66) 0%,rgba(255,255,255,0.00) 103.52%); padding: 15px;">
+				
+				
+				
+				
 				<p style="text-align:left;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				Donec ornare aliquam ipsum, quis imperdiet massa egestas a. Pellentesque convallis 
 				viverra justo, ac commodo dui vehicula non. Praesent sed sem lectus. Sed vel nisi 
@@ -16,11 +46,30 @@
 				
 			
 					<% users.forEach(function(users){ %>
-					<div class="userInfo">
+					<div class="users">
+						<div class="coupContents">
 						<h3>Id: <%= users.id %> </h3>
 						<h3>Comment: <%= users.Comment %> </h3>
 						<h3>Name: <%= users.name %> </h3>
 						<h3>Email: <%= users.email %> </h3>
+						<a href="/edituser/<%= users.id %>" class="button">Edit</a>
+						 <p class="button" id="doit<%= users.id %>">Delete</a>
+						  <p id="yes<%= users.id %>" style="display:none">
+						  Are you sure?
+                        	<a href="/deleteuser/<%= users.id %>" class="button">Yes</a>
+            			 </p>
+             
+ <script>
+   $(document).ready(function(){
+     $("#doit<%= users.id %>").click(function(){
+       $("#yes<%= users.id %>").fadeToggle(2000);
+       
+     })
+     
+   })
+   
+ </script>
+            			</div>
 					</div>	
 					<% }); %>
 					
@@ -30,7 +79,7 @@
 		    
 		</section>
 		  
- 
+ 	</section>
 			
 		   
 			

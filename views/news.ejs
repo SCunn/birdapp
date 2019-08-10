@@ -1,0 +1,77 @@
+<% include ../partials/header %>
+<section id="contentHolder">
+     <h1 class="container">Recent Sightings / News</h1>
+    	<section id="showcase">
+			  
+			 <div class="carousel">
+
+				
+				<div class="slide fade">
+				  <img src="/bird-197052_640.jpg" alt="bird" style="width:100%;" >
+				</div>
+				
+				<div class="slide fade">
+				  <img src="/eagle-1753002_640.jpg" alt="Eagle" style="width:100%;" >
+				</div>
+				
+				<div class="slide fade">
+				  <img src="/kite-1119277_640.jpg" alt="Kite" style="width:100%;" >
+				</div>
+				
+				<div class="slide fade">
+				  <img src="/owl-2.jpg" alt="owl-2" style="width:100%;" >
+				</div>
+				 
+			 </div> 
+			 </section>
+			
+
+                <div class="container">
+                   	<div style="background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.66) 0%,rgba(255,255,255,0.00) 103.52%); padding: 15px;">
+ 
+                   
+			 
+			 <% result.forEach(function(news) { %>
+			 
+			 
+                 <div class="users">     
+                        <h3>Id: <%= news.Id %> </h3>
+                        <h3>Bird: <%= news.Bird %></h3>
+                        <h3>Location: <%= news.Location %></h3>
+                        <h3>Date: <%= news.Date %></h3>
+			        
+			        <button> <a href="/editnews/<%= news.Id %>" class="button">Edit</a></button>
+                      <p class="button" id="doit<%= news.Id %>">Delete</a>
+                      <p id="yes<%= news.Id %>" style="display:none">
+                      Are you sure?
+                        <a href="/deletenews/<%= news.Id %>" class="button">Yes</a>
+             </p>
+             
+ <script>
+   $(document).ready(function(){
+     $("#doit<%= news.Id %>").click(function(){
+       $("#yes<%= news.Id %>").fadeToggle(1000); 
+       
+     })
+     
+   })
+   
+ </script>
+             
+			    </div>
+			 <% }); %>
+<a href="/additem" class="button">
+
+        </div>
+    </div>
+<button><a href="/addnews" class="button">Add News</a></button>
+  
+
+      </section>
+
+
+
+
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,48 @@
+
+<% include ../partials/header %>
+
+<section id="contentHolder">
+  <div class="container">
+  <h1>Welcome to the add News page </h1> <br>
+
+          <div id="newsImg" style="width: 60%;"><img src="/raptor.jpg" alt="newsImg" style="width:100%;"></div>
+         
+         
+         <form accept-charset="UTF-8"  action="/addnews" method="post" enctype="multipart/form-data" id="uploadForm" ref="uploadForm">    
+            <div>
+                <label for="name">Bird</label>
+                <input name="bird" type="text" placeholder="What Kind of Bird did you see" required title="You Must Enter Field"/>
+            </div>
+            <div>
+                <label for="name">Location</label>
+                <input name="local" type="text" placeholder="Where did you see it" required title="You Must Enter Field"/>
+            </div>
+            <div>
+                <label for="name">Time and Date of Sighting</label>
+                <input name="date" type="text" placeholder="When did you see it" required title="You Must Enter Field"/>
+            </div>
+       
+             
+                   
+             <br>
+            <div>
+                <button class="button">Add</button>
+            </div>
+          </form>
+          
+          <br>
+          <button class="button"><a href="/news">Back to News</a></button>
+      
+ 
+     
+        
+      
+
+
+			
+		  
+		</div>
+		  
+</section>	  		 
+		  
+<% include ../partials/footer %>

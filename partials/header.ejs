@@ -1,3 +1,6 @@
+ <!--header.ejs page.  This page was created by Shane Cunningham and is based on the header.ejs page created by Liam McCabe-->
+
+
 
 <html>
 	<head>
@@ -14,40 +17,43 @@
 		
 		<header>
 			<div class="container">
-				<img src="/eagle_.png" alt="logo" style="height: 95; float: left; padding-right: 0px;">
+				<img src="/eagle_.png" alt="logo" style="height: 95; float: left; padding-right: 0px; ">
 				<div id="branding">
 					<h1><span class="highlight">BIRD</span> APP</h1>
 				</div>
 				<nav>
 					<ul>
-					  <li class="current"><a href="/">Home</a></li>
+						
+					  <li><a href="/">Home</a></li>
 					  <li><a href="/userpage">User's</a></li>
 					  <li><a href="/adduser">Add User</a></li>
+					  <li><a href="/items">Content</a></li>
+					  <!--<li><a href="/upload">Upload</a></li>-->
+					  <li><a href="/news">News</a></li>
 					</ul>
 				</nav>
+				
+				
 			</div>
 				  <br>
+				  
+				  <div class="row">
+  
+			<form accept-charset="UTF-8" style="display: inline-block; width: 90%; padding: 0 5%;" action="/search" method="post" e>
+                  
+                  
+                    <label for="name">Search</label>
+                    <input name="search" type="text" placeholder="Search" />
+                     
+                     
+
+            <button class="button">Search</button>
+          </div>
+              </form>
+              
+              <marquee behavior="scroll" direction="left">Welcome to The Bird app...  %></marquee>
+              
+              
 		</header>
 		
-		<section id="showcase">
-			  
-			 <div class="carousel">
-
-				
-				<div class="slide fade">
-				  <img src="/bird-197052_640.jpg" alt="bird" style="width:100%;" >
-				</div>
-				
-				<div class="slide fade">
-				  <img src="/eagle-1753002_640.jpg" alt="Eagle" style="width:100%;" >
-				</div>
-				
-				<div class="slide fade">
-				  <img src="/kite-1119277_640.jpg" alt="Kite" style="width:100%;" >
-				</div>
-				
-				<div class="slide fade">
-				  <img src="/owl-2.jpg" alt="owl-2" style="width:100%;" >
-				</div>
-				 
-			 </div>      
+		     

@@ -1,0 +1,57 @@
+ <!--items.ejs page.  This page was created by Shane Cunningham and is based on the products.ejs page created by Liam McCabe-->
+
+<% include ../partials/header %>
+
+<div id="contentHolder">
+
+<div class="container">
+        
+         
+          <h1>Welcome to the Items page</h1>
+            <br>
+            
+        
+          
+        <% result.forEach(function(item) { %>
+                       
+                      
+                        <div class="userInfo">     
+                        <h3>Id: <%= item.Id %> </h3>
+                        <h3>Name: <%= item.Name %></h3>
+                        <img src="/<%= item.Image %>" class="pimage"  />
+                        <audio controls>
+                            <source src="/<%= item.Audio %>" >
+                        </audio>  
+                        <p class="coupContents">Facts: <%= item.Facts %></p>
+                     
+                       <button> <a href="/edititem/<%= item.Id %>" class="button">Edit</a></button>
+  <p class="button" id="doit<%= item.Id %>">Delete</a>
+  <p id="yes<%= item.Id %>" style="display:none">
+  Are you sure?
+                        <a href="/delete/<%= item.Id %>" class="button">Yes</a>
+             </p>
+             
+             <script>
+               $(document).ready(function(){
+                 $("#doit<%= item.Id %>").click(function(){
+                   $("#yes<%= item.Id %>").fadeToggle(1000); 
+                   
+                 })
+                 
+               })
+               
+             </script>
+             
+                        </div>
+           
+    
+  
+  <% }); %>
+        
+        
+ <button><a href="/additem" class="button">Add New Item</a></button>
+    </div>
+    
+</div>
+
+<% include ../partials/footer %>

@@ -1,25 +1,38 @@
+<!--// adduser.ejs page.  This page was created by Shane Cunningham and is based on the add.ejs page created by Liam McCabe-->
+
+
 <% include ../partials/header %>
 
-<div class="row">
-  <h1>Welcome to the add products page  <br>
-<div style="text-align: center; width: 100%; background-color: rgba(255, 255, 255, 0.8);text-align: center; margin-bottom: 10px;" >
+<section id="contentHolder">
+  <div class="container">
+  <h1>Welcome to the add Users page</h1>  <br>
+
          
+      	<div id="newsImg" style="width: 60%;"><img src="/raptor.jpg" alt="newsImg" style="width:100%;"></div>
+   
          
-         
-         <form accept-charset="UTF-8" style="display: inline-block; width: 90%;" action="/adduser" method="post" >    
-                <div class="item">
+         <form style="float:right;" accept-charset="UTF-8" action="/adduser" method="post" >    
+                <div>
                   <label for="name">Name</label>
-                    <input name="name" type="text" placeholder="Enter name" />
-                      <label for="price">Comment</label>
-                    <input name="Comment" type="text" placeholder="Enter comment" />
-                   <label for="image">Email</label> 
-                    <input name="email" type="text" placeholder="Enter email" />
-<button class="button">Add</button>
-          </div>
+                    <input name="name" autofocus type="text" placeholder="Enter name",  required title="please only enter letters"/>
+                </div>
+                <div>
+                      <label for="Comment">Comment</label>
+                    <input name="Comment" autofocus type="text" placeholder="Enter comment", required title="please only enter letters"/>
+                </div>
+                <div>
+                   <label for="email">Email</label> 
+                    <input name="email" autofocus type="text" placeholder="Enter email", required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  />
+                </div>  
+                <div>
+                      <button class="button">Add</button>
+                </div>
               </form>
+              
+              
     </div>
-  </h1>
-</div>
+  
+</section>
 
 
 			

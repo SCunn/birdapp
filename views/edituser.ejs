@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+
+<section id="contentHolder">
+  <div class="container">
+  <h1>Welcome to the edit contact page </h1> <br>
+
+     	<div id="newsImg" style="width: 60%;"><img src="/raptor.jpg" alt="newsImg" style="width:100%;"></div>    
+         
+    <% res.forEach(function(mainOne) {%>     
+         <form accept-charset="UTF-8" style="" action="/edituser/<%= mainOne.id %>" method="post" >    
+                <div>
+                  <label for="name">Name</label>
+                    <input name="name" type="text" value="<%= mainOne.name %>" />
+                </div>   
+                <div>
+                      <label for="comment">Comment</label>
+                    <input name="Comment" type="text" value="<%= mainOne.Comment %>" />
+                </div>  
+                <div>
+                   <label for="email">Email</label> 
+                    <input name="email" type="text" value="<%= mainOne.email %>" />
+                </div>
+                
+                <div>
+                    <button class="button">Edit</button>
+                </div>
+              </form>
+              
+              <% }) %>
+              
+   
+  
+</div>
+
+</section>
+
+
+
+<% include ../partials/footer %>

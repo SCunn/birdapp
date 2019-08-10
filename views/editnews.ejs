@@ -1,0 +1,51 @@
+<!--// edititem.ejs page.  This page was created by Shane Cunningham and is based on the editproduct.ejs page created by Liam McCabe-->
+
+<% include ../partials/header %>
+<section id="contentHolder">
+  <div class="container">
+      
+  <h1>Welcome to the Edit News page </h1>  <br>
+  
+     <div id="newsImg" style="width: 60%;"><img src="/raptor.jpg" alt="newsImg" style="width:100%;"></div> 
+
+
+      <% result.forEach(function(news) { %>   
+         
+         <form accept-charset="UTF-8"  action="/editnews/<%= news.Id %>" method="post" enctype="multipart/form-data" id="uploadForm" ref="uploadForm">    
+            
+            <div>
+                <label for="name">Type of Bird</label>
+                    <input name="bird" type="text" value="<%= news.Bird %>" required title="You Must Enter Field"/>
+            </div>   
+            <div>
+                     <label for="name">Type of Bird</label>
+                    <input name="local" type="text" value="<%= news.Location %>" required title="You Must Enter Field" />
+            </div>     
+            <div>
+                     <label for="name">Type of Bird</label>
+                    <input name="date" type="text" value="<%= news.Date %>" required title="You Must Enter Field"/>
+            </div>        
+                
+                
+             <br>
+             <div>
+                <button class="button">Edit</button>
+             </div>   
+          </div>
+              </form>
+              
+               <% }); %>
+               <br>
+    <button class="button"><a href="/news">Back to News</a></button>
+    </div>
+ 
+
+
+
+			
+		  
+    </div>		  
+</section>			  
+		 
+		  
+<% include ../partials/footer %>

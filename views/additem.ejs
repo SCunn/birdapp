@@ -1,0 +1,63 @@
+<!--// additem.ejs page.  This page was created by Shane Cunningham and is based on the addproduct.ejs page created by Liam McCabe-->
+
+<% include ../partials/header %>
+
+
+<section id="contentHolder">
+  <div class="container">
+  <h1>Welcome to the add Item page </h1> <br>
+
+         
+    <div id="newsImg" style="width: 60%;"><img src="/raptor.jpg" alt="newsImg" style="width:100%;"></div>
+         
+         <form accept-charset="UTF-8" action="/additem" method="post" enctype="multipart/form-data" id="uploadForm" ref="uploadForm">    
+            <div>
+                <label for="name">Name</label>
+                    <input name="name" type="text" placeholder="Enter Item Name" />
+            </div> 
+            <div>
+                <label for="name">Upload Image</label>    
+                    <input type="file" class="button" name="sampleFile" required title="You Must Upload an Image to Continue"/>
+            </div>    
+        
+            <div>   
+                    <label for="audio">Audio</label>
+                    <select  name="audio">
+                         <option>eagle-cry.wav</option>
+                         <option>eagle.ogg</option>
+                         <option>eagle-cry.wav</option>
+                         <option>hawk-dry-v1.wav</option>
+                         <option>kestrel.wav</option>
+                         <option>owl.wav</option>
+                         <option>peregrine-falcon-1.wav</option>
+                         <option>peregrine-falcon-2.wav</option>
+                         
+                    </select>  
+             </div> 
+                 
+                <!--<label for="file">Insert .MP3/ .WAV/ .OGG File</label>  -->
+                <!-- <input type="file" class="button" type="text" name="sampleFile"/>-->
+             <div>      
+                <label for="facts">Facts</label>
+                 <textarea name="facts" type="text" style="width:100%; height:50px;"  maxlength="255"   title=" 255 Characters max" placeholder="Enter Information"></textarea>
+             </div>       
+                   
+                
+                <br>       
+            <div>
+                <button class="button">Add</button>
+            </div>
+        </form>
+        <br>
+        <button class="button"><a href="/items">Back to Content page</a></button>
+        
+        
+    </div>
+  
+			
+</section>	  
+		  
+		  
+		 
+		  
+<% include ../partials/footer %>
